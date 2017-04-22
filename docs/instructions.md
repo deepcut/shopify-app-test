@@ -50,7 +50,11 @@ res.value
 
 5. Once you figure out how to do this, you could put a button in the Home#index view that hits another route, which will do the modification.
 
+## 5. Acceptance criteria
+
+1. When the shop owner clicks on a button, our app should modify his app's theme file by inserting the meta tag specified above.
+2. ONLY on individual product pages, we should see a `og:image` meta tag right before the `</head>` tag.
+
 ## Keep in mind
 
 - Make sure to preserver the original liquid theme value just in case we need to revert.
-
