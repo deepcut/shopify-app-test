@@ -23,8 +23,10 @@ SHOPIFY_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 1. Get the current liquid file by
 
-`res = ShopifyAPI::Asset.find('layout/theme.liquid')`
-`res.value`
+```
+res = ShopifyAPI::Asset.find('layout/theme.liquid')
+res.value
+```
 
 2. Figure out a way to insert a meta tag RIGHT before the `</head>` tag as follows:
 
