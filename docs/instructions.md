@@ -16,6 +16,7 @@
 SHOPIFY_API_KEY=XXXXXXXXXXXXXXX
 SHOPIFY_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
+
 2. Visit `localhost:3000` and type in the store URL - `bicep-photography.myshopify.com`. This will be stored as a `Shop` record in the db.
 2. When you hit localhost:3000, the session will already be authenticated with the store. You can start playing around by putting `binding.pry` in `HomeController#index`.
 
@@ -36,7 +37,9 @@ res.value
 {%- endif -%}
 ```
 
-3. Encode some key product info into the `?meta` key, such as title, description, and price. If you wanna see how it's done in the liquid code, take a look by typing `ShopifyAPI::Asset.find('snippets/social-meta-tags.liquid').value`. This is key b/c the returned image will contain info given in the meta key.
+3. Encode some key product info into the `?meta` key, such as title, description, and price. If you wanna see how it's done in the liquid code, take a look by typing the following. This is key b/c the returned image will contain info given in the meta key.
+
+`ShopifyAPI::Asset.find('snippets/social-meta-tags.liquid').value`
 
 4. For further info on the "Assets" API, take a look at
 
