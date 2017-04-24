@@ -90,3 +90,14 @@ new_theme_value = "<!-- this comment  was added via the API -->\n" + theme.value
 theme.value = new_theme_value
 theme.save!
 ```
+
+## Imgix
+
+* 
+* Imgix.js - https://github.com/imgix/imgix.js/#base-64-encoded-parameters
+
+## Warning about editing Themes
+
+* [Don't Edit Theme Files](https://help.shopify.com/api/sdks/shopify-apps/modifying-online-store/use-javascript-responsibly)
+* [Use a ScriptTag](https://help.shopify.com/api/reference/scripttag)
+
