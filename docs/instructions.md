@@ -29,7 +29,7 @@ res = ShopifyAPI::Asset.find('layout/theme.liquid')
 res.value
 ```
 
-2. Figure out a way to insert a meta tag RIGHT before the `</head>` tag as follows:
+2. Figure out a way to insert a meta tag RIGHT after the `<head>` tag as follows:
 
 ```
 {%- if template.name == 'product' -%}
@@ -58,3 +58,27 @@ res.value
 ## Keep in mind
 
 - Make sure to preserver the original liquid theme value just in case we need to revert.
+
+----
+
+## Facebook open graph testing/debugging
+
+* https://developers.facebook.com/tools/debug/og/object
+* Paste the URL
+* See the raw tags that were found
+
+## API Usage Notes:
+
+* Direct API usage For a private app:
+  ```ruby
+  shop_url = "https://#{ENV.fetch('SHOPIFY_API_KEY')}:#{ENV.fetch('SHOPIFY_SECRET')}@bicep-photography.myshopify.com/admin"
+  ShopifyAPI::Base.site = shop_url
+  shop = ShopifyAPI::Shop.current
+
+
+  # Example: Get a specific product
+  product_id = 9221550217
+  product = ShopifyAPI::Product.find(product_id)
+
+  ```
+
