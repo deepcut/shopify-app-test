@@ -82,3 +82,11 @@ res.value
 
   ```
 
+## Modifying a template via the API:
+
+```ruby
+ theme = ShopifyAPI::Asset.find('layout/theme.liquid')
+new_theme_value = "<!-- this comment  was added via the API -->\n" + theme.value
+theme.value = new_theme_value
+theme.save!
+```
