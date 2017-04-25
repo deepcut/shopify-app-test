@@ -93,8 +93,9 @@ theme.save!
 
 ## Imgix
 
-* 
+* https://blog.imgix.com/2016/03/01/base64-encoding.html?_ga=1.248501184.679897000.1490296588 
 * Imgix.js - https://github.com/imgix/imgix.js/#base-64-encoded-parameters
+* 
 
 ## Warning about editing Themes
 
