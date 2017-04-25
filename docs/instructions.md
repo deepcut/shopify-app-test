@@ -95,7 +95,7 @@ theme.save!
 
 * https://blog.imgix.com/2016/03/01/base64-encoding.html?_ga=1.248501184.679897000.1490296588 
 * Imgix.js - https://github.com/imgix/imgix.js/#base-64-encoded-parameters
-* 
+* Some non-base-64 examples with blends and marks: http://htmlpreview.github.io/?https://github.com/deepcut/shopify-app-test/blob/master/public/imgix-non-base64-example.html
 
 ## Warning about editing Themes
 
