@@ -97,6 +97,12 @@ theme.save!
 * Imgix.js - https://github.com/imgix/imgix.js/#base-64-encoded-parameters
 * Some non-base-64 examples with blends and marks: http://htmlpreview.github.io/?https://github.com/deepcut/shopify-app-test/blob/master/public/imgix-non-base64-example.html
 
+Using third-party images:
+* https://docs.imgix.com/setup/serving-images
+* https://docs.imgix.com/setup/securing-images
+* https://freakdesign.com.au/blogs/news/76831303-use-your-own-domain-instead-of-shopify-cdn-in-image-urls
+* https://help.shopify.com/api/tutorials/application-proxies
+
 ## Warning about editing Themes
 
 * [Don't Edit Theme Files](https://help.shopify.com/api/sdks/shopify-apps/modifying-online-store/use-javascript-responsibly)
@@ -104,4 +110,8 @@ theme.save!
 
 ## Shopify
 
+Liquid references:
+
+* http://cheat.markdunkley.com/
 * https://help.shopify.com/themes/liquid/filters/string-filters#url_param_escape
+* https://help.shopify.com/themes/liquid/filters/url-filters#img_url
