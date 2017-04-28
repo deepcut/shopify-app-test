@@ -1,2 +1,41 @@
 {% assign image_url = product | img_url: '400x400' -%}
 {{ image_url }}
+{% assign shopify_path = product | img_url: '400x400' | remove_first: '//cdn.shopify.com' -%}
+{% assign imgix_host = '//mega-tags-shopify.imgix.net' -%}
+{% assign q = 'q=90' -%}
+{% assign w = 'w=400' -%}
+{% assign fit = 'fit=crop' -%}
+{% assign markpad = 'markpad=0' -%}
+{% assign markalign = 'markalign=top' -%}
+{% assign markx = 'markx=1' -%}
+{% assign marky = 'marky=121' -%}
+{% assign ba = 'ba=top' -%}
+{% assign bx = 'bx=1' -%}
+{% assign bm = 'bm=normal' -%}
+
+{% comment -%}
+blend: https://assets.imgix.net/~text?txtsize=36&w=350&txtfont=HelveticaNeue-Medium&txt=Product+Header&txtpad=30&txtclr=fff
+blend=https%3A%2F%2Fassets.imgix.net%2F~text%3Ftxtsize%3D36%26w%3D350%26txtfont%3DHelveticaNeue-Medium%26txt%3DProduct%2BHeader%26txtpad%3D30%26txtclr%3Dfff%0A
+{% endcomment -%}
+
+{% assign blend = 'blend=https%3A%2F%2Fassets.imgix.net%2F~text' -%}
+{% assign blend_txtsize = 'txtsize%3D36' -%}
+{% assign blend_w = 'w%3D350' -%}
+{% assign encoded_title = product.title | truncate: 25 | url_encode %}
+{% assign encoded_price = product.price | money_with_currency | url_encode %}
+{% assign blend_txt = 'txt%3D' | append: encoded_title | append: ': ' | append: encoded_price -%}
+{% assign blend_txtpad = 'txtpad%3D30' -%}
+
+{% comment -%}
+mark: https://assets.imgix.net/~text?txtsize=16&w=300&txtfont=HelveticaNeue-Medium&txt=The+quick+brown+fox+jumps+over+the+lazy+dog.&txtpad=30&txtclr=fff
+mark=https%3A%2F%2Fassets.imgix.net%2F~text%3Ftxtsize%3D16%26w%3D300%26txtfont%3DHelveticaNeue-Medium%26txt%3DThe%2Bquick%2Bbrown%2Bfox%2Bjumps%2Bover%2Bthe%2Blazy%2Bdog.%26txtpad%3D30%26txtclr%3Dfff%0A
+{% endcomment -%}
+
+{% assign mark = 'mark=https%3A%2F%2Fassets.imgix.net%2F~text' -%}
+{% assign mark_txtsize = 'txtsize%3D16' -%}
+{% assign mark_w = 'w%3D300' -%}
+{% assign encoded_description = product.description | truncate: 100 | url_encode %}
+{% assign mark_txt = 'txt%3D' | append: encoded_description -%}
+{% assign mark_txtpad = 'txtpad%3D30' -%}
+
+{{ imgix_host }}{{ shopify_path }}?{{ q }}&{{ w }}&{{ fit }}&{{ markpad }}&{{ markalign }}&{{ markx }}&{{ marky }}&{{  }}&{{ ba }}&{{ bx }}&{{ bm }}&{{ blend }}%3F{{ blend_txtsize }}%26{{ blend_w }}%26{{ blend_txt }}%26{{ blend_txtpad }}&{{ mark }}%3F{{ mark_txtsize }}%26{{ mark_w }}%26{{ mark_txt }}%26{{ mark_txtpad }}
